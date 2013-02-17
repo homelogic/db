@@ -57,9 +57,10 @@ ALTER TABLE tbl_actions AUTO_INCREMENT=10000;
  INSERT INTO tbl_actions(room_id) VALUES(10000);
  INSERT INTO tbl_actions(room_id) VALUES(10001);
 
- INSERT INTO tbl_device(device_id, room, device_name) VALUES("A2B5D1",10000, "Light Control");
- INSERT INTO tbl_device(device_id, room, device_name) VALUES("A2B5F1",10001, "Light Control");
- INSERT INTO tbl_device(device_id, room, device_name) VALUES("A2F5A3",10000, "Light Control 2");
+ INSERT INTO tbl_device(device_id, room, device_name, device_type) VALUES("1E4C08",10000, "Modem", "PLM");
+ INSERT INTO tbl_device(device_id, room, device_name, device_type) VALUES("1DE94B",10000, "Living Room Light", "Light");
+ INSERT INTO tbl_device(device_id, room, device_name, device_type) VALUES("20CBCF",10001, "Bedroom Light", "Light");
+ INSERT INTO tbl_device(device_id, room, device_name, device_type) VALUES("1F45C4",10000, "Front Door", "Door Lock");
  
  
 
