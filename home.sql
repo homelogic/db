@@ -27,6 +27,7 @@ CREATE TABLE tbl_device(
  device_name	VARCHAR(40)	NOT NULL,
  device_type	ENUM('Light','Door Lock','Thermostat', 'PLM', 'Controller') NULL,
  status			TINYINT	NOT NULL DEFAULT 0,
+ current_temp	INTEGER(4)	NULL,
  device_value	INTEGER(4)	NOT NULL DEFAULT 0,
  stamp			TIMESTAMP NOT NULL,
  PRIMARY KEY(device_id),
@@ -52,7 +53,6 @@ ALTER TABLE tbl_actions AUTO_INCREMENT=10000;
  INSERT INTO tbl_rooms(room_id, room_name) VALUES(10000, "Living Room");
  INSERT INTO tbl_rooms(room_id, room_name) VALUES(10001, "Bed Room");
  
- INSERT INTO tbl_actions(action_id) VALUES(10000); /* Actions for whole house */
  INSERT INTO tbl_actions(room_id) VALUES(10000);
  INSERT INTO tbl_actions(room_id) VALUES(10001);
 
@@ -60,7 +60,7 @@ ALTER TABLE tbl_actions AUTO_INCREMENT=10000;
  INSERT INTO tbl_device(device_id, room, device_name, device_type) VALUES("1DE94B",10000, "Living Room Light", "Light");
  INSERT INTO tbl_device(device_id, room, device_name, device_type) VALUES("20CBCF",10001, "Bedroom Light", "Light");
  INSERT INTO tbl_device(device_id, room, device_name, device_type) VALUES("1F45C4",10000, "Front Door", "Door Lock");
- 
+ INSERT INTO tbl_device(device_id, room, device_name, device_type) VALUES("1E0E1D",10000, "HVAC", "Thermostat");
  
 
 
